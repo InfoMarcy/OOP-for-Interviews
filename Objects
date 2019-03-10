@@ -78,3 +78,11 @@ function increase(obj){
 
 increase(obj);
 console.log("Obj => ", obj);  // Obj => {value: 11}
+
+
+#ADD A PROPERTY IN JAVASCRIPT
+1. circle.location = { x: 1};
+2. circle['location'] =  { x: 1};
+
+#DELETE A PROPERTY IN JAVASCRIPT
+delete  circle.location
