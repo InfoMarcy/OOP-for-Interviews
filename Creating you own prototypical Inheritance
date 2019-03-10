@@ -1,14 +1,16 @@
 //Creating your own Prototypical Inheritance
 
-function Shape(){
-
+function Shape(color){
+ this.color = color;
 };
 
 Shape.prototype.duplicate = function(){
     console.log('duplicate');
 };
 
-function Circle(radius){
+function Circle(radius, color){
+    // call the super constructor
+    Shape.call(this, color);
 this.radius = radius;
 };
 
@@ -17,6 +19,8 @@ this.radius = radius;
 
 // We want to create a new Circlebase object that inherites from shapeBase, instead of objectbase
 Circle.prototype = Object.create(Shape.prototype);
+// Whenever we reset the prototype as a best practice, make sure to reset the cosntructor as well
+Circle.prototype.constrcutor = Circle;
 
 
 
@@ -27,4 +31,4 @@ console.log('dra');
 
 
 const s = new Shape();
-const c = new Circle(123);
+const c = new Circle(123, 'red');
