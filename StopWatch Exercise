@@ -1,0 +1,50 @@
+// Stop Watch exercise
+
+function StopWatch() {
+
+    let startTime, endTime, running, duration = 0;
+
+
+    this.start = function () {
+        //Validation check to see if the startWatch has already started
+        if(running) throw new Error('Stopwatch has already started');
+
+        // set the running flag to true
+        running = true;
+
+        // start the the timer
+        startTime = new Date();
+    };
+
+    this.stop = function () {
+              //Validation check to see if the startWatch has no t started
+              if(!running) throw new Error('Stopwatch is not started');
+
+              // set the running flag to false
+              running = false;
+      
+              // start the the timer
+              endTime = new Date();
+
+              const seconds = (endTime.getTime() - startTime.getTime()) /1000;
+              duration += seconds;
+    };
+
+    this.reset = function () {
+        // reset the values to their defaults
+           duration = 0;
+           startTime = null;
+           endTime = null;
+           running = false;
+          
+    };
+
+    // Getters AND SETTERS
+    Object.defineProperty(this, 'duration', {
+        get: function (){
+            return  Math.floor(duration.value/1000);
+        }
+      });
+};
+
+const sw = new StopWatch();
