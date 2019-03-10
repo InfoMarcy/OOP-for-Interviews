@@ -36,3 +36,9 @@ and case statements.
 1.Using encapsulation, we group related variables and functions together, and in this way we can reduce complexity.
 Now we can re-use this object in different parrts of the program, or in different programs.
 
+2. With Abstraccion, we hide the details and the complexity and show only the essentials. This tecnique reduces complexity,
+and also isolates  the impact of changes in the code.
+
+3. With Inheritance we can eliminate redundant code,
+
+4. With POlymorpfhism we can refactor ugly switch case statements
