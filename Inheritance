@@ -1,0 +1,36 @@
+There are two types of innheritence in javascript:
+1 Classical:  this one enables an object to take on the properties and methods of another object. and this makes it easy to reuse
+code in different parts of an application.
+
+2.Prototypical Inheritance: a prototype  is just a regular object in memory. There is nothing special about it. every object has
+prototype or parent, except the root object.
+
+Objects created by a given constructor will have the same prototype
+
+# Get the prototype of an objecct
+Object.getPrototypeOf(myObj);
+
+// every constructor has a prototype property
+function Circle(radius){
+    //Instance members
+    this.radius = radius;
+
+    this.move = function(){
+       console.log('move');
+    };
+
+};
+
+// Add a prototype members to Circles
+Circle.prototype.draw = function(){
+    this.move();
+    console.log('draw');
+};
+
+// override the toStrign method 
+Circle.prototype.toString =  function (){
+  return 'Circle with radius ' + this.radius;
+};
+
+const c1 = new Circle(1);
+const c2 = new Circle(12);
