@@ -84,5 +84,28 @@ console.log("Obj => ", obj);  // Obj => {value: 11}
 1. circle.location = { x: 1};
 2. circle['location'] =  { x: 1};
 
+const propetyName = 'center-location';
+3. circle[propetyName] =  { x: 1};
+
 #DELETE A PROPERTY IN JAVASCRIPT
 delete  circle.location
+
+#ENUMERATING PROPERTIES
+1. for (let key in circle){
+    console.log(key, circle[key]);
+};
+
+2. for (let key in circle){
+    if(typeof circle[key] !== 'function'){
+    console.log(key, circle[key]);
+    };
+};
+
+#Will return all the keys on the circle as an array
+const keys = Object.keys(circle);
+console.log(keys);
+
+#Know if an object has a given property
+if('radius' in circle){
+    console.log('Circle has a raius');
+};
