@@ -8,6 +8,15 @@ Shape.prototype.duplicate = function(){
     console.log('duplicate');
 };
 
+//Middleware to extend the prototype 
+function extend(Child, Parent){
+    // We want to create a new Circlebase object that inherites from shapeBase, instead of objectbase
+    Child.prototype = Object.create(Parent.prototype);
+    // Whenever we reset the prototype as a best practice, make sure to reset the cosntructor as well
+    Child.prototype.constrcutor = Child;
+};
+
+
 function Circle(radius, color){
     // call the super constructor
     Shape.call(this, color);
@@ -15,20 +24,19 @@ this.radius = radius;
 };
 
 
-
-
-// We want to create a new Circlebase object that inherites from shapeBase, instead of objectbase
-Circle.prototype = Object.create(Shape.prototype);
-// Whenever we reset the prototype as a best practice, make sure to reset the cosntructor as well
-Circle.prototype.constrcutor = Circle;
-
-
+//extends the Circle with the Shape prototype
+extend(Circle, Shape);
 
 Circle.prototype.draw =  function(){
 console.log('dra');
 };
 
-
+function Square(size){
+   this.size = size;
+};
+//extends the Square with the Shape prototype
+extend(Square, Shape);
 
 const s = new Shape();
 const c = new Circle(123, 'red');
+const sq = new Square(23);
