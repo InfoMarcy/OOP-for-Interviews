@@ -15,7 +15,7 @@ const circle = {
 circle.draw();
 
 
-2. Factory function
+2. Factory Function
 function createCircle(radius){
 
   return {
@@ -29,3 +29,14 @@ function createCircle(radius){
 
 const circle = createCircle(1);
 circle.draw();
+
+
+3.  Contructor Function
+function Circle(radius){
+    this.radius = radius,
+    this.draw = function(){
+        console.log("Another circle");
+    }
+};
+
+const anotherCircle = new Circle(1);
