@@ -1,4 +1,5 @@
 1. An object in javascript is basically a collection of key, values pair.
+In javascript functions are obects
 
 const circle = {
     radios: 1,
@@ -40,3 +41,19 @@ function Circle(radius){
 };
 
 const anotherCircle = new Circle(1);
+
+
+# VALUES TYPES VS REFERENCE TYPES
+1. VALUE TYPES
+Number
+String
+Boolean
+Symbol
+undefined
+null
+
+2. Reference Types
+Object
+Function
+Array
+
