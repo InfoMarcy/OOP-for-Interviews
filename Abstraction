@@ -1,0 +1,38 @@
+Hide the deatails and expose only the essencsials
+
+function Circle(radius){
+
+    this.radius = radius;
+
+    // will be available just inside this function    
+    let defaultLocation = { x: 0 , y : 0};
+
+    let computeOptimunLocation = function(factor){
+    //........
+    };
+
+    this.draw = function(){
+        computeOptimunLocation(0.1);
+        console.log('draw');
+    };
+
+
+      // Getters AND SETTERS
+      Object.defineProperty(this, 'defaultLocation', {
+      get: function (){
+          return defaultLocation;
+      },
+
+      set: function(value){
+        // validation
+        if(!value.x || !value.y) throw new Error('invalid location.')
+          
+        defaultLocation = value
+      }
+    });
+
+};
+const circle = new Circle(10);
+circle.defaultLocation = 1 // throw the error
+circle.draw();
+
