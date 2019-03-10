@@ -1,1 +1,38 @@
+1. Object Oriented Programming is a programing paradigm or style of programming that is centered around objects rahter 
+than functions.
+
+2. Languages that support object oriented programming: Java, Javascript, C#, Python, Ruby, Angular
+
+3. Object is a group o related variables and functions combines into a unit. 
+We refer to this variables as properties and the functions as methods
+
+#4 PILLARS OF OBJECT ORIENTE PROGRAMING
+1. ENCAPSULATION: is a group of related variables, and functions that operates on them into objects.
+
+let employee = {
+baseSalary: 30000,
+overtime: 10,
+rate:20,
+    getWage: function (){
+          return this.baseSalary + (this.overtime * this.rate)
+    };
+
+};
+
+employee.getWage();
+
+2. ABSTRACTION:  Hide some of the properties and methods from the outside which gives us a couple of benefits.
+    1. we'll make the interface of those objects simpler, using and understanding objects with a few properties and methods 
+    is easier than objects with several properties and methods.
+    2. Hepls us reduce the impact of change
+
+
+3. INHERITANCE:  is a mechanism that allows you to eliminate redundant code.
+4. POLYMORPHISM: poly means many and and morph means forms. so polymorphism means many forms.
+In object oriented programming polymorphism is a tecnique that allows you to get rid of long if and else statements, or switch
+and case statements.
+
+#BENEFITS OF OBJECT ORIENTED PROGRAMMING
+1.Using encapsulation, we group related variables and functions together, and in this way we can reduce complexity.
+Now we can re-use this object in different parrts of the program, or in different programs.
 
