@@ -1,0 +1,17 @@
+1. An object in javascript is basically a collection of key, values pair.
+
+const circle = {
+    radios: 1,
+    location: {
+        x: 1,
+        y: 1
+    },
+
+    draw: function () {
+        console.log("draw");
+    }
+};
+
+
+
+circle.draw();
