@@ -1,0 +1,30 @@
+//Creating your own Prototypical Inheritance
+
+function Shape(){
+
+};
+
+Shape.prototype.duplicate = function(){
+    console.log('duplicate');
+};
+
+function Circle(radius){
+this.radius = radius;
+};
+
+
+
+
+// We want to create a new Circlebase object that inherites from shapeBase, instead of objectbase
+Circle.prototype = Object.create(Shape.prototype);
+
+
+
+Circle.prototype.draw =  function(){
+console.log('dra');
+};
+
+
+
+const s = new Shape();
+const c = new Circle(123);
