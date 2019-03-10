@@ -1,0 +1,29 @@
+// every constructor has a prototype property
+function Circle(radius){
+    //Instance members
+    this.radius = radius;
+
+    this.move = function(){
+       console.log('move');
+    };
+
+};
+
+// Add a prototype members to Circles
+Circle.prototype.draw = function(){
+    this.move();
+    console.log('draw');
+};
+
+// override the toStrign method 
+Circle.prototype.toString =  function (){
+  return 'Circle with radius ' + this.radius;
+};
+
+const c1 = new Circle(1);
+const c2 = new Circle(12);
+
+// Objects with keys only returns instance members
+console.log(Object.keys(c1));  //  (2) ["radius", "move"]
+console.log('Property ', c1.hasOwnProperty('radius')) // true
+console.log('method ', c1.hasOwnProperty('draw')) // false
